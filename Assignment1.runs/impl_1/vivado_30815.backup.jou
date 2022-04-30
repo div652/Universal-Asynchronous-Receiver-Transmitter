@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Apr 29 21:02:47 2022
+# Process ID: 30815
+# Current directory: /home/divyanshu/Assignments/Assignment1/Assignment1.runs/impl_1
+# Command line: vivado -log DesignFile.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source DesignFile.tcl -notrace
+# Log file: /home/divyanshu/Assignments/Assignment1/Assignment1.runs/impl_1/DesignFile.vdi
+# Journal file: /home/divyanshu/Assignments/Assignment1/Assignment1.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source DesignFile.tcl -notrace
