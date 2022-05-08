@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/divyanshu/Assignments/Assignment4/Assignment4.srcs/sources_1/new/singleDisplay.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'singleDisplay'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/divyanshu/Assignments/Assignment4/Assignment4.srcs/sources_1/new/design.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'lightDisplay'
