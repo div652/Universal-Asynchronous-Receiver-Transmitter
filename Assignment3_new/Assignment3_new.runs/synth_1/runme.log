@@ -1,0 +1,364 @@
+
+*** Running vivado
+    with args -log lightDisplay.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source lightDisplay.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source lightDisplay.tcl -notrace
+Command: synth_design -top lightDisplay -part xc7a35tcpg236-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 251097 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1654.102 ; gain = 152.719 ; free physical = 4973 ; free virtual = 16307
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'lightDisplay' [/home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.srcs/sources_1/new/design.vhd:14]
+INFO: [Synth 8-638] synthesizing module 'singleDisplay' [/home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.srcs/sources_1/new/singleDisplay.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'singleDisplay' (1#1) [/home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.srcs/sources_1/new/singleDisplay.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'lightDisplay' (2#1) [/home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.srcs/sources_1/new/design.vhd:14]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1707.852 ; gain = 206.469 ; free physical = 5007 ; free virtual = 16331
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1710.820 ; gain = 209.438 ; free physical = 5007 ; free virtual = 16327
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1710.820 ; gain = 209.438 ; free physical = 5007 ; free virtual = 16327
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [/home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lightDisplay_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/lightDisplay_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1880.477 ; gain = 0.000 ; free physical = 4919 ; free virtual = 16235
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1880.477 ; gain = 0.000 ; free physical = 4919 ; free virtual = 16235
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 5000 ; free virtual = 16306
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 5000 ; free virtual = 16306
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 5000 ; free virtual = 16306
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "anode" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "light_num" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 4993 ; free virtual = 16299
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module lightDisplay 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     31 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     31 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 4     
+Module singleDisplay 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[31]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[30]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[29]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[28]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[27]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[26]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[25]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[24]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[23]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[22]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[21]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[20]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[19]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[18]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[17]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[16]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[15]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[14]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[13]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[12]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[11]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[10]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[9]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[8]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[7]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[6]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[5]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3886] merging instance 'counter_new_reg[4]' (FDR) to 'counter_new_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter_new_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\counter_new_reg[2] )
+INFO: [Synth 8-3886] merging instance 'light_num_reg[31]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[30]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[29]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[28]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[27]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[26]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[25]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[24]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[23]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[22]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[21]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[20]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[19]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[18]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[17]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[16]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[15]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[14]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[13]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[12]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[11]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[10]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[9]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[8]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[7]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[6]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[5]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[4]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3886] merging instance 'light_num_reg[3]' (FD) to 'light_num_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\light_num_reg[2] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 4980 ; free virtual = 16289
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 4871 ; free virtual = 16178
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 4869 ; free virtual = 16176
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 4869 ; free virtual = 16176
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 4869 ; free virtual = 16176
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 4869 ; free virtual = 16176
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 4869 ; free virtual = 16176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 4869 ; free virtual = 16176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 4869 ; free virtual = 16176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 4869 ; free virtual = 16176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    17|
+|3     |LUT1   |    22|
+|4     |LUT2   |    36|
+|5     |LUT3   |     1|
+|6     |LUT4   |     7|
+|7     |LUT6   |     5|
+|8     |FDRE   |    40|
+|9     |IBUF   |    17|
+|10    |OBUF   |    11|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------+--------------+------+
+|      |Instance         |Module        |Cells |
++------+-----------------+--------------+------+
+|1     |top              |              |   157|
+|2     |  Single_display |singleDisplay |    11|
++------+-----------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 4869 ; free virtual = 16176
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1880.477 ; gain = 209.438 ; free physical = 4921 ; free virtual = 16228
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1880.477 ; gain = 379.094 ; free physical = 4921 ; free virtual = 16228
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1880.477 ; gain = 0.000 ; free physical = 4915 ; free virtual = 16178
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+78 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1880.477 ; gain = 514.477 ; free physical = 5012 ; free virtual = 16274
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1880.477 ; gain = 0.000 ; free physical = 5012 ; free virtual = 16274
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.runs/synth_1/lightDisplay.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file lightDisplay_utilization_synth.rpt -pb lightDisplay_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun May  8 21:36:37 2022...
