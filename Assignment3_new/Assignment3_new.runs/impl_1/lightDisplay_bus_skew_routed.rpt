@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Sun May  8 03:56:31 2022
+| Date         : Sun May  8 20:59:27 2022
 | Host         : divyanshu-HP-ENVY-x360-Convertible-13-bd0xxx running 64-bit Ubuntu 20.04.2 LTS
 | Command      : report_bus_skew -warn_on_violation -file lightDisplay_bus_skew_routed.rpt -pb lightDisplay_bus_skew_routed.pb -rpx lightDisplay_bus_skew_routed.rpx
 | Design       : lightDisplay

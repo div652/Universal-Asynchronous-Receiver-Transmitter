@@ -70,12 +70,12 @@ set rc [catch {
   create_project -in_memory -part xc7a35tcpg236-2
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/divyanshu/Assignments/Assignment3_new/Assignment3_new.cache/wt [current_project]
-  set_property parent.project_path /home/divyanshu/Assignments/Assignment3_new/Assignment3_new.xpr [current_project]
-  set_property ip_output_repo /home/divyanshu/Assignments/Assignment3_new/Assignment3_new.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.cache/wt [current_project]
+  set_property parent.project_path /home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.xpr [current_project]
+  set_property ip_output_repo /home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet /home/divyanshu/Assignments/Assignment3_new/Assignment3_new.runs/synth_1/lightDisplay.dcp
-  read_xdc /home/divyanshu/Assignments/Assignment3_new/Assignment3_new.srcs/constrs_1/new/constraints.xdc
+  add_files -quiet /home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.runs/synth_1/lightDisplay.dcp
+  read_xdc /home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.srcs/constrs_1/new/constraints.xdc
   link_design -top lightDisplay -part xc7a35tcpg236-2
   close_msg_db -file init_design.pb
 } RESULT]
