@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Sun May  8 20:11:12 2022
+| Date         : Mon May  9 04:55:18 2022
 | Host         : divyanshu-HP-ENVY-x360-Convertible-13-bd0xxx running 64-bit Ubuntu 20.04.2 LTS
 | Command      : report_control_sets -verbose -file lightDisplay_control_sets_placed.rpt
 | Design       : lightDisplay
@@ -58,7 +58,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              63 |           28 |
+| No           | No                    | No                     |              63 |           22 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -73,8 +73,8 @@ Table of Contents
 +---------------------------------+---------------+------------------+------------------+----------------+
 |           Clock Signal          | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +---------------------------------+---------------+------------------+------------------+----------------+
-|  Sampled_number_reg[15]_i_1_n_0 |               |                  |                5 |             16 |
-|  Clk_IBUF_BUFG                  |               |                  |               23 |             47 |
+|  Sampled_number_reg[15]_i_1_n_0 |               |                  |                7 |             16 |
+|  Clk_IBUF_BUFG                  |               |                  |               15 |             47 |
 +---------------------------------+---------------+------------------+------------------+----------------+
 
 

@@ -44,9 +44,9 @@ end component singleDisplay;
                if(Clk'event  and rising_Edge(clk)) then 
                     counter<= ((counter+1)) ;
                     
-                    counter_new<= ((counter) / 400000) mod 4  ;
-                    state2 := ((counter)/400000) mod 1024 ; 
-                    counter_2 <= ((counter/10000)mod 32) ;
+                    counter_new<= ((counter) / 524288) mod 4  ;
+                    state2 := ((counter)/524288) mod 1024 ; 
+                    counter_2 <= ((counter/16384)mod 32) ;
                     end if ;     
                if(state2 = 0) then Sampled_number<=Number ; end if;
                
