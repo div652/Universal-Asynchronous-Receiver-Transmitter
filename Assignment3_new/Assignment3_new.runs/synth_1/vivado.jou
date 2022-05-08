@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Sun May  8 20:58:26 2022
-# Process ID: 239072
+# Start of session at: Sun May  8 21:36:19 2022
+# Process ID: 251055
 # Current directory: /home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.runs/synth_1
 # Command line: vivado -log lightDisplay.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lightDisplay.tcl
 # Log file: /home/divyanshu/Assignments/Assignment1/Assignment3_new/Assignment3_new.runs/synth_1/lightDisplay.vds

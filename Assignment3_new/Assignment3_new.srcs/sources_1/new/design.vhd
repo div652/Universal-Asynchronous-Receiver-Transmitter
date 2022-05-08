@@ -39,7 +39,7 @@ end component singleDisplay;
             		
                if(Clk'event  and rising_Edge(clk)) then 
                     counter<= ((counter+1)) ;   -- increments by 1 after every clock cycle
-                    counter_new<= ((counter) / 400000 )mod 4;   -- this is cyclic , goes 0 .. 1 .. 2 .. 3 changes after 4 ms  = 400000 * 10 ns
+                    counter_new<= ((counter) / 524288 )mod 4;   -- this is cyclic , goes 0 .. 1 .. 2 .. 3 changes after 4 ms  = 400000 * 10 ns
                     
                     
                     
