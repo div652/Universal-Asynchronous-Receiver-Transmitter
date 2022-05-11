@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="/home/divyanshu/Assignments/Assignment1/Assignment4/Assignment4.xpr">
+<Project Version="7" Minor="40" Path="/home/divyanshu/Desktop/COL215/Assignment4/Assignment4.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="f8cbe18dad5c4177be36e5841b86daa7"/>

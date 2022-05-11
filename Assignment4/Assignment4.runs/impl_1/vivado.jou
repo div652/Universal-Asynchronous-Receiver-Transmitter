@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon May  9 04:55:56 2022
-# Process ID: 273698
-# Current directory: /home/divyanshu/Assignments/Assignment1/Assignment4/Assignment4.runs/impl_1
+# Start of session at: Wed May 11 15:21:20 2022
+# Process ID: 6128
+# Current directory: /home/divyanshu/Desktop/COL215/Assignment4/Assignment4.runs/impl_1
 # Command line: vivado -log lightDisplay.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source lightDisplay.tcl -notrace
-# Log file: /home/divyanshu/Assignments/Assignment1/Assignment4/Assignment4.runs/impl_1/lightDisplay.vdi
-# Journal file: /home/divyanshu/Assignments/Assignment1/Assignment4/Assignment4.runs/impl_1/vivado.jou
+# Log file: /home/divyanshu/Desktop/COL215/Assignment4/Assignment4.runs/impl_1/lightDisplay.vdi
+# Journal file: /home/divyanshu/Desktop/COL215/Assignment4/Assignment4.runs/impl_1/vivado.jou
 #-----------------------------------------------------------
 source lightDisplay.tcl -notrace
