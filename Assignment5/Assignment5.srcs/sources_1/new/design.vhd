@@ -33,8 +33,8 @@ end component singleDisplay;
     signal counter  : integer :=0;
     signal counter_new : integer := 0 ; 
     signal counter_2 : integer := 0 ;
-    signal Sampled_number : std_logic_vector(15 downto 0) :="1010101010101010";
-    signal Entered_Number : std_logic_vector(15 downto 0) := "0101010101010101"; 
+    signal Sampled_number : std_logic_vector(15 downto 0) :=x"0000";
+    signal Entered_Number : std_logic_vector(15 downto 0) := x"0000"; 
     signal state2 : integer := 0 ; 
    
     
@@ -42,7 +42,7 @@ end component singleDisplay;
     	process(clk)  
     	
     	  variable position :integer:=0 ;
-    	  variable brightness : std_logic_vector(7 downto 0) ;
+    	  variable brightness : std_logic_vector(7 downto 0);
     	  type btness is array (3 downto 0) of integer  ; 
     	  variable brightness0123 : btness := (0,0,0,0);
 --    	  variable brightness0 : integer := 0 ; -- least significant number 
@@ -311,4 +311,3 @@ end component singleDisplay;
         
     
 --    end structure;
-
