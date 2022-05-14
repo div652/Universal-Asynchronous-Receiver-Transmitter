@@ -1,0 +1,10 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|              sys_clk_pin |              sys_clk_pin |                                                                               counter_decisecond_reg[6]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                               counter_decisecond_reg[5]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                              counter_decisecond_reg[22]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                               counter_decisecond_reg[7]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                               counter_decisecond_reg[2]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                               counter_decisecond_reg[0]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
