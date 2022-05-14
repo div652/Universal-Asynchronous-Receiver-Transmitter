@@ -49,51 +49,66 @@ architecture Behavioral of design is
            anode : out STD_LOGIC_Vector(3 downto 0));
 end component singleDisplay;
 
-    signal enable : std_logic := '0';
-    signal counter : integer := 0;
-    signal counter_display : integer := 0;
-    signal counter_decisecond : integer := 0;
-    signal counter_second_ones : integer := 0;
-    signal counter_second_tens : integer := 0;
-    signal counter_minutes : integer := 0;
-    signal deciseconds : integer := 0;
-    signal counter_seconds : integer := 0;
+--    signal enable : std_logic := '0';
+--    signal counter : integer := 0;
+--    signal counter_display : integer := 0;
+--    signal counter_decisecond : integer := 0;
+--    signal counter_second_ones : integer := 0;
+--    signal counter_second_tens : integer := 0;
+--    signal counter_minutes : integer := 0;
+--    signal deciseconds : integer := 0;
+--    signal counter_seconds : integer := 0;
     signal digit_A : std_logic;
     signal digit_B : std_logic;
     signal digit_C : std_logic;
     signal digit_D : std_logic;
     signal light_num : integer;
-    signal second_ones : integer := 0;
-    signal second_tens : integer := 0;
-    signal minutes : integer := 0;
-    signal Time_display : std_logic_vector(15 downto 0) := "0000000000000000";
+--    signal second_ones : integer := 0;
+--    signal second_tens : integer := 0;
+--    signal minutes : integer := 0;
+--    signal Time_display : std_logic_vector(15 downto 0) := "0000000000000000";
     
     
 begin
 
     process(clk) 
+    variable enable : std_logic := '0';
+    variable counter : integer := 0;
+    variable counter_display : integer := 0;
+    variable counter_decisecond : integer := 0;
+    variable counter_second_ones : integer := 0;
+    variable counter_second_tens : integer := 0;
+    variable counter_minutes : integer := 0;
+    variable deciseconds : integer := 0;
+    variable counter_seconds : integer := 0;
+    variable second_ones : integer := 0;
+    variable second_tens : integer := 0;
+    variable minutes : integer := 0;
+    variable counter2: integer :=0;
+    variable Time_display : std_logic_vector(15 downto 0) := "0000000000000000";
         begin
             if(rising_edge(clk) and clk'event) then
-                if(reset = '1') then counter <= 0; end if;
-                if(startContinue = '1') then enable <= '1'; elsif (pause = '1') then enable <= '0'; end if;
-                if(enable = '1') then 
-                counter <= counter + 1;
-                counter_display <= counter/400000 mod 4;
-                counter_decisecond <= counter/10000000;
-                deciseconds <= counter_decisecond mod 10;
-                counter_seconds <= counter_decisecond/10;
-                second_ones <= (counter_seconds mod 60) mod 10;
-                second_tens <= (counter_seconds mod 60) / 10;
-                minutes <= (counter_seconds / 60) mod 10;
---                counter_second_tens <= (counter_decisecond/600);
---                counter_second_ones <= counter_decisecond / 10;
---                counter_second_tens <= counter_second_ones / 10;
---                counter_minutes <= counter_second_tens / 
+                if(reset = '1') then counter := 0; end if;
+                if(startContinue = '1') then enable := '1'; elsif (pause = '1') then enable := '0'; end if;
+                counter_display := counter2/400000 mod 4;
+                counter2 := counter2+1;
                 
-                Time_display(15 downto 12) <= std_logic_vector(to_unsigned(minutes,4));
-                Time_display(11 downto 8) <= std_logic_vector(to_unsigned(second_tens,4));
-                Time_display(7 downto 4) <= std_logic_vector(to_unsigned(second_ones,4));
-                Time_display(3 downto 0) <= std_logic_vector(to_unsigned(deciseconds,4));
+                if(enable = '1') then 
+                counter := counter + 1;
+                
+                counter_decisecond := counter/10000000;
+                deciseconds := counter_decisecond mod 10;
+                counter_seconds := counter_decisecond/10;
+                second_ones := (counter_seconds mod 60) mod 10;
+                second_tens := (counter_seconds mod 60) / 10;
+                minutes := ((counter_seconds /60));
+
+                end if;
+                
+                Time_display(15 downto 12) := std_logic_vector(to_unsigned(minutes,4));
+                Time_display(11 downto 8) := std_logic_vector(to_unsigned(second_tens,4));
+                Time_display(7 downto 4) := std_logic_vector(to_unsigned(second_ones,4));
+                Time_display(3 downto 0) := std_logic_vector(to_unsigned(deciseconds,4));
                 
                 case(counter_display) is
                     when 0 => 
@@ -126,7 +141,7 @@ begin
                         
                    end case;
                 end if;
-            end if;
+            
     end process;
 
     Single_display: entity work.singleDisplay(Design_arch) port map(digit_A , digit_B, digit_C , digit_D ,light_num , LED ,anode);

@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/tanish/Desktop/GitHub/COL215/Assignment-6/Assignment-6.runs/synth_1'
+HD_PWD='/home/divyanshu/Desktop/COL215/Assignment-6/Assignment-6.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
