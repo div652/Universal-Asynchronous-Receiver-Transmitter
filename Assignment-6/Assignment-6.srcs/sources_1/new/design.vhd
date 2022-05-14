@@ -170,4 +170,4 @@ begin
     end process;
 
     Single_display: entity work.singleDisplay(Design_arch) port map(digit_A , digit_B, digit_C , digit_D ,light_num , LED ,anode);
-end Behavioral;
+end Behavioral; 
