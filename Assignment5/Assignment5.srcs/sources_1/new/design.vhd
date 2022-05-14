@@ -76,8 +76,8 @@ end component singleDisplay;
                         when others =>   if(counter_2<brightness0123(0)) then digit_A<=Sampled_Number(3);digit_B<=Sampled_Number(2);digit_C<=Sampled_Number(1);digit_D<=Sampled_Number(0);light_num<=((position + 3) mod 4) ;else light_num<=4;end if;
                         end case;
                     
---                    if(BtnL='1') then Entered_Number <= Number  ; end if ; 
---                    if(state2 = 0) then Sampled_Number <= Entered_Number ; end if ; 
+                    if(BtnL='1') then Entered_Number <= Number  ; end if ; 
+                    if(state2 = 0) then Sampled_Number <= Entered_Number ; end if ; 
                     
                     if(BtnR='1') then brightness:=Number(7 downto 0) ; end if; 
                     
@@ -130,12 +130,12 @@ end component singleDisplay;
             
             
             
-            process(clk) is begin 
-                if(BtnL='1') then Entered_Number <= Number  ; end if ; 
-                end process;
-            process(clk) is begin 
-               if(state2 = 0) then Sampled_Number <= Entered_Number ; end if ;
-               end process;
+--            process(clk) is begin 
+--                if(BtnL='1') then Entered_Number <= Number  ; end if ; 
+--                end process;
+--            process(clk) is begin 
+--               if(state2 = 0) then Sampled_Number <= Entered_Number ; end if ;
+--               end process;
                
 	Single_display: entity work.singleDisplay(Design_arch) port map(digit_A , digit_B, digit_C , digit_D ,light_num , LED ,anode);
         
