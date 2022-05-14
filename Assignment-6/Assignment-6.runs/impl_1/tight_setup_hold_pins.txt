@@ -1,11 +1,13 @@
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-|              sys_clk_pin |              sys_clk_pin |                                                                                      second_tens_reg[0]/D|
-|              sys_clk_pin |              sys_clk_pin |                                                                                      second_tens_reg[3]/D|
-|              sys_clk_pin |              sys_clk_pin |                                                                                      second_ones_reg[3]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                    Time_display_reg[14]/D|
 |              sys_clk_pin |              sys_clk_pin |                                                                                             digit_D_reg/D|
-|              sys_clk_pin |              sys_clk_pin |                                                                                      second_tens_reg[2]/D|
-|              sys_clk_pin |              sys_clk_pin |                                                                                      second_tens_reg[1]/D|
-|              sys_clk_pin |              sys_clk_pin |                                                                                      deciseconds_reg[3]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                    Time_display_reg[12]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                    Time_display_reg[13]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                     Time_display_reg[8]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                    Time_display_reg[10]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                     Time_display_reg[9]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                     Time_display_reg[4]/D|
+|              sys_clk_pin |              sys_clk_pin |                                                                                     Time_display_reg[1]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

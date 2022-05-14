@@ -88,27 +88,34 @@ begin
     variable Time_display : std_logic_vector(15 downto 0) := "0000000000000000";
         begin
             if(rising_edge(clk) and clk'event) then
-                if(reset = '1') then counter := 0; end if;
+                if(reset = '1') 
+                then counter := 0; 
+                Time_display := "0000000000000000";
+               
+                end if;
                 if(startContinue = '1') then enable := '1'; elsif (pause = '1') then enable := '0'; end if;
-                counter_display := counter2/400000 mod 4;
+--                counter_display := (counter2/400000) mod 4;
+                counter_display := (counter2/524288) mod 4;
                 counter2 := counter2+1;
                 
                 if(enable = '1') then 
                 counter := counter + 1;
                 
-                counter_decisecond := counter/10000000;
+                counter_decisecond := counter/8388608; --  now will be changed in 0.83 decisonds
                 deciseconds := counter_decisecond mod 10;
                 counter_seconds := counter_decisecond/10;
                 second_ones := (counter_seconds mod 60) mod 10;
                 second_tens := (counter_seconds mod 60) / 10;
-                minutes := ((counter_seconds /60));
+                minutes := ((counter_seconds/60));
 
-                end if;
+                
                 
                 Time_display(15 downto 12) := std_logic_vector(to_unsigned(minutes,4));
                 Time_display(11 downto 8) := std_logic_vector(to_unsigned(second_tens,4));
                 Time_display(7 downto 4) := std_logic_vector(to_unsigned(second_ones,4));
                 Time_display(3 downto 0) := std_logic_vector(to_unsigned(deciseconds,4));
+                
+                end if;
                 
                 case(counter_display) is
                     when 0 => 

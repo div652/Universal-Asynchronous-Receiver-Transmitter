@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date             : Sat May 14 20:56:59 2022
+| Date             : Sat May 14 21:18:10 2022
 | Host             : divyanshu-HP-ENVY-x360-Convertible-13-bd0xxx running 64-bit Ubuntu 20.04.2 LTS
 | Command          : report_power -file design_power_routed.rpt -pb design_power_summary_routed.pb -rpx design_power_routed.rpx
 | Design           : \design 
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.152        |
+| Total On-Chip Power (W)  | 0.079        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.080        |
+| Dynamic (W)              | 0.007        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.2         |
-| Junction Temperature (C) | 25.8         |
+| Max Ambient (C)          | 84.6         |
+| Junction Temperature (C) | 25.4         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |     0.023 |     2606 |       --- |             --- |
-|   LUT as Logic |     0.021 |     1969 |     20800 |            9.47 |
-|   CARRY4       |     0.002 |      335 |      8150 |            4.11 |
+| Clocks         |     0.001 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |     1928 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     1438 |     20800 |            6.91 |
+|   CARRY4       |    <0.001 |      249 |      8150 |            3.06 |
 |   Register     |    <0.001 |       87 |     41600 |            0.21 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.030 |     2138 |       --- |             --- |
-| I/O            |     0.025 |       15 |       106 |           14.15 |
+| Signals        |    <0.001 |     1590 |       --- |             --- |
+| I/O            |     0.005 |       15 |       106 |           14.15 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.152 |          |           |                 |
+| Total          |     0.079 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.065 |       0.055 |      0.010 |
-| Vccaux    |       1.800 |     0.014 |       0.001 |      0.013 |
-| Vcco33    |       3.300 |     0.008 |       0.007 |      0.001 |
+| Vccint    |       1.000 |     0.012 |       0.002 |      0.010 |
+| Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -140,7 +140,7 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
-| \design  |     0.080 |
+| \design  |     0.007 |
 +----------+-----------+
 
 
