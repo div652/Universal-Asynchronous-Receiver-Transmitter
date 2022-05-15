@@ -88,7 +88,7 @@ end component singleDisplay;
                        when "00" => brightness0123(3) := 2 ; 
                        when  "01" => brightness0123(3) := 5 ; 
                        when  "10" => brightness0123(3) := 10 ; 
-                       when  "11" => brightness0123(3) := 31 ; 
+                       when  others => brightness0123(3) := 31 ; 
                       end case;
                       
                      
@@ -97,7 +97,7 @@ end component singleDisplay;
                        when "00" => brightness0123(2) := 2 ; 
                        when  "01" => brightness0123(2) := 5 ; 
                        when  "10" => brightness0123(2) := 10 ; 
-                       when  "11" => brightness0123(2) := 31 ; 
+                       when  others => brightness0123(2) := 31 ; 
                       end case;
                       
                      case brightness(3 downto 2) is 
@@ -105,7 +105,7 @@ end component singleDisplay;
                        when "00" => brightness0123(1) := 2 ; 
                        when  "01" => brightness0123(1) := 5 ; 
                        when  "10" => brightness0123(1) := 10 ; 
-                       when  "11" => brightness0123(1) := 31 ; 
+                       when  others => brightness0123(1) := 31 ; 
                       end case;
                       
                      case brightness(1 downto 0) is 
@@ -113,7 +113,7 @@ end component singleDisplay;
                        when "00" => brightness0123(0) := 2 ; 
                        when  "01" => brightness0123(0) := 5 ; 
                        when  "10" => brightness0123(0) := 10 ; 
-                       when  "11" => brightness0123(0) := 31 ; 
+                       when  others => brightness0123(0) := 31 ; 
                       end case;
                       
                     
