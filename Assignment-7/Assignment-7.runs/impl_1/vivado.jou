@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed May 18 17:05:47 2022
+# Process ID: 168748
+# Current directory: /home/tanish/Desktop/GitHub/COL215/Assignment-7/Assignment-7.runs/impl_1
+# Command line: vivado -log design.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design.tcl -notrace
+# Log file: /home/tanish/Desktop/GitHub/COL215/Assignment-7/Assignment-7.runs/impl_1/design.vdi
+# Journal file: /home/tanish/Desktop/GitHub/COL215/Assignment-7/Assignment-7.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source design.tcl -notrace
