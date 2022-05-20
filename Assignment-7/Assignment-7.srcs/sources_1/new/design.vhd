@@ -43,7 +43,7 @@ signal clear_bitcounter, clear_samplecounter, inc_bitcounter, inc_samplecounter 
 signal number : std_logic_vector(15 downto 0);
 begin
 
-    process(clk) 
+    process(Clk'event  and rising_Edge(clk)) 
     variable i :integer := 0 ; 
         
         
