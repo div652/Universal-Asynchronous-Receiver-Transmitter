@@ -33,8 +33,8 @@ architecture Design_arch of singleDisplay is
             	
                 begin 
                 	case light_num is 
-                    	when 0 => anode<="0111";
-                        when 1 => anode<="1011";
+                    	when 0 => anode<="1111";
+                        when 1 => anode<="1111";
                         when 2 => anode<="1101";
                         when 3 => anode<="1110";
                         when others => anode<="1111";

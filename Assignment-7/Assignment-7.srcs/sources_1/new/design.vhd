@@ -15,7 +15,6 @@ entity design is
 end design;
 
 architecture Behavioral of design is
-    -- currently we will show "00xx" on LED display, we can also consider removing the two zeroes
     
     component multiDisplay
 	   Port ( 
@@ -31,20 +30,23 @@ signal present_state : std_logic;
 signal next_state : std_logic;
 signal bit_counter : integer := 0;
 signal sample_counter : integer := 0;
+signal shift : std_logic;
+signal shift_reg : std_logic_vector(9 downto 0):="1110101010";
 
-signal shift_reg : std_logic_vector(9 downto 0);
 
 signal baud_rate : integer := 9600;
 signal clk_freq : integer := 100000000;
 signal div_counter : integer := clk_freq/(baud_rate*16);
 
-signal clear_bitcounter, clear_sample_counter, inc_bitcounter : std_logic;
+signal clear_bitcounter, clear_samplecounter, inc_bitcounter, inc_samplecounter : std_logic;
 
 signal number : std_logic_vector(15 downto 0);
 begin
 
     process(clk) 
-    
+    variable i :integer := 0 ; 
+        
+        
         begin
             
             if(reset = '1') then 
@@ -56,42 +58,64 @@ begin
                 counter <= counter + 1;
                 if(counter >= div_counter - 1) then
                    counter <= 0;
---                   present_state <= next_state;
+                   present_state <= next_state;
+                if (shift='1') then shift_reg(i) <= inbit;i:=(i+1)mod 10; end if;
+                
+                if (clear_samplecounter='1') then sample_counter <=0; end if;
+                if (inc_samplecounter = '1') then sample_counter <= sample_counter +1; end if;
+                if (clear_bitcounter = '1') then bit_counter <=0; end if;
+                if (inc_bitcounter = '1') then bit_counter <= bit_counter +1; end if;
+                end if;
                 end if;
                 
-                
+             
+    end process;
+    
+    process(clk) 
+    
+    begin
+        
+            shift <= '0'; 
+            clear_samplecounter <= '0';
+            inc_samplecounter <='0';
+            clear_bitcounter <='0';
+            inc_bitcounter <='0'; 
+            next_state <='0'; 
             case (present_state) is
                 when '0' =>
                     if (inbit = '1') then
-                        present_state <= '0';
+                        next_state <= '0';
                         
                     else                   
-                        present_state <= '1';
-                        bit_counter <= 0;
-                        sample_counter <= 0;
+                        next_state <= '1';
+                        clear_bitcounter <= '1';
+                        clear_samplecounter <= '1';
                     end if;
   
                 when others =>
-                    present_state <= '1';
+                    next_state <= '1';
                     if(sample_counter = 7) then
-                        shift_reg <= inbit & shift_reg(9 downto 1);
+                        shift <= '1';
+                        
                     end if;
                     
                     if(sample_counter = 15) then
                         if(bit_counter = 9) then
-                            present_state <= '0';
+                            next_state <= '0';
+--                            i:=0;
                         end if;
-                        bit_counter <= bit_counter + 1;
-                        sample_counter <= 0;
+                        inc_bitcounter <= '1';
+                        clear_samplecounter <= '1';
                     else
-                        sample_counter <= sample_counter + 1;
+                        inc_samplecounter <= '1';
                     end if;
                 
             end case;            
-            end if;       
+                 
         
             number <= "00000000" & shift_reg(8 downto 1);
     end process;
+    
     
 
 Multi_display: entity work.lightDisplay(structure) port map(number, clk, LED, anode);

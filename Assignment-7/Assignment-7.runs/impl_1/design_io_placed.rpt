@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date                      : Wed May 18 17:06:03 2022
-| Host                      : tanish-HP-ENVY-Laptop-13-ba1xxx running 64-bit Ubuntu 20.04.4 LTS
+| Date                      : Wed May 18 18:11:38 2022
+| Host                      : divyanshu-HP-ENVY-x360-Convertible-13-bd0xxx running 64-bit Ubuntu 20.04.2 LTS
 | Command                   : report_io -file design_io_placed.rpt
 | Design                    : \design 
 | Device                    : xc7a35t
@@ -10,7 +10,7 @@ Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 | Package                   : cpg236
 | Package Version           : FINAL 2014-02-19
 | Package Pin Delay Version : VERS. 2.0 2014-02-19
--------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------
 
 IO Information
 

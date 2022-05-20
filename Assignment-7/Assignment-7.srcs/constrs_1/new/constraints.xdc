@@ -297,7 +297,7 @@ set_property PACKAGE_PIN W19 [get_ports reset]
 	#set_property IOSTANDARD LVCMOS33 [get_ports Vsync]
 
 
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets <myHier/myNet>]
+set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets counter[0]]
 
 ##USB-RS232 Interface
 set_property PACKAGE_PIN B18 [get_ports inbit]						

@@ -1,8 +1,8 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Wed May 18 17:06:14 2022
-| Host         : tanish-HP-ENVY-Laptop-13-ba1xxx running 64-bit Ubuntu 20.04.4 LTS
+| Date         : Wed May 18 18:11:49 2022
+| Host         : divyanshu-HP-ENVY-x360-Convertible-13-bd0xxx running 64-bit Ubuntu 20.04.2 LTS
 | Command      : report_methodology -file design_methodology_drc_routed.rpt -pb design_methodology_drc_routed.pb -rpx design_methodology_drc_routed.rpx
 | Design       : \design 
 | Device       : xc7a35tcpg236-2
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 85
+             Violations found: 102
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
 | TIMING-18 | Warning  | Missing input or output delay | 11         |
-| TIMING-20 | Warning  | Non-clocked latch             | 73         |
-| TIMING-23 | Warning  | Combinational loop found      | 1          |
+| TIMING-20 | Warning  | Non-clocked latch             | 77         |
+| TIMING-23 | Warning  | Combinational loop found      | 14         |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -251,212 +251,297 @@ Related violations: <none>
 
 TIMING-20#33 Warning
 Non-clocked latch  
-The latch sample_counter_reg[0] cannot be properly analyzed as its control pin sample_counter_reg[0]/G is not reached by a timing clock
+The latch i_reg[0] cannot be properly analyzed as its control pin i_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#34 Warning
 Non-clocked latch  
-The latch sample_counter_reg[10] cannot be properly analyzed as its control pin sample_counter_reg[10]/G is not reached by a timing clock
+The latch i_reg[1] cannot be properly analyzed as its control pin i_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#35 Warning
 Non-clocked latch  
-The latch sample_counter_reg[11] cannot be properly analyzed as its control pin sample_counter_reg[11]/G is not reached by a timing clock
+The latch i_reg[2] cannot be properly analyzed as its control pin i_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#36 Warning
 Non-clocked latch  
-The latch sample_counter_reg[12] cannot be properly analyzed as its control pin sample_counter_reg[12]/G is not reached by a timing clock
+The latch i_reg[3] cannot be properly analyzed as its control pin i_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#37 Warning
 Non-clocked latch  
-The latch sample_counter_reg[13] cannot be properly analyzed as its control pin sample_counter_reg[13]/G is not reached by a timing clock
+The latch present_state_reg cannot be properly analyzed as its control pin present_state_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#38 Warning
 Non-clocked latch  
-The latch sample_counter_reg[14] cannot be properly analyzed as its control pin sample_counter_reg[14]/G is not reached by a timing clock
+The latch sample_counter_reg[0] cannot be properly analyzed as its control pin sample_counter_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#39 Warning
 Non-clocked latch  
-The latch sample_counter_reg[15] cannot be properly analyzed as its control pin sample_counter_reg[15]/G is not reached by a timing clock
+The latch sample_counter_reg[10] cannot be properly analyzed as its control pin sample_counter_reg[10]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#40 Warning
 Non-clocked latch  
-The latch sample_counter_reg[16] cannot be properly analyzed as its control pin sample_counter_reg[16]/G is not reached by a timing clock
+The latch sample_counter_reg[11] cannot be properly analyzed as its control pin sample_counter_reg[11]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#41 Warning
 Non-clocked latch  
-The latch sample_counter_reg[17] cannot be properly analyzed as its control pin sample_counter_reg[17]/G is not reached by a timing clock
+The latch sample_counter_reg[12] cannot be properly analyzed as its control pin sample_counter_reg[12]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#42 Warning
 Non-clocked latch  
-The latch sample_counter_reg[18] cannot be properly analyzed as its control pin sample_counter_reg[18]/G is not reached by a timing clock
+The latch sample_counter_reg[13] cannot be properly analyzed as its control pin sample_counter_reg[13]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#43 Warning
 Non-clocked latch  
-The latch sample_counter_reg[19] cannot be properly analyzed as its control pin sample_counter_reg[19]/G is not reached by a timing clock
+The latch sample_counter_reg[14] cannot be properly analyzed as its control pin sample_counter_reg[14]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#44 Warning
 Non-clocked latch  
-The latch sample_counter_reg[1] cannot be properly analyzed as its control pin sample_counter_reg[1]/G is not reached by a timing clock
+The latch sample_counter_reg[15] cannot be properly analyzed as its control pin sample_counter_reg[15]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#45 Warning
 Non-clocked latch  
-The latch sample_counter_reg[20] cannot be properly analyzed as its control pin sample_counter_reg[20]/G is not reached by a timing clock
+The latch sample_counter_reg[16] cannot be properly analyzed as its control pin sample_counter_reg[16]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#46 Warning
 Non-clocked latch  
-The latch sample_counter_reg[21] cannot be properly analyzed as its control pin sample_counter_reg[21]/G is not reached by a timing clock
+The latch sample_counter_reg[17] cannot be properly analyzed as its control pin sample_counter_reg[17]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#47 Warning
 Non-clocked latch  
-The latch sample_counter_reg[22] cannot be properly analyzed as its control pin sample_counter_reg[22]/G is not reached by a timing clock
+The latch sample_counter_reg[18] cannot be properly analyzed as its control pin sample_counter_reg[18]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#48 Warning
 Non-clocked latch  
-The latch sample_counter_reg[23] cannot be properly analyzed as its control pin sample_counter_reg[23]/G is not reached by a timing clock
+The latch sample_counter_reg[19] cannot be properly analyzed as its control pin sample_counter_reg[19]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#49 Warning
 Non-clocked latch  
-The latch sample_counter_reg[24] cannot be properly analyzed as its control pin sample_counter_reg[24]/G is not reached by a timing clock
+The latch sample_counter_reg[1] cannot be properly analyzed as its control pin sample_counter_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#50 Warning
 Non-clocked latch  
-The latch sample_counter_reg[25] cannot be properly analyzed as its control pin sample_counter_reg[25]/G is not reached by a timing clock
+The latch sample_counter_reg[20] cannot be properly analyzed as its control pin sample_counter_reg[20]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#51 Warning
 Non-clocked latch  
-The latch sample_counter_reg[26] cannot be properly analyzed as its control pin sample_counter_reg[26]/G is not reached by a timing clock
+The latch sample_counter_reg[21] cannot be properly analyzed as its control pin sample_counter_reg[21]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#52 Warning
 Non-clocked latch  
-The latch sample_counter_reg[27] cannot be properly analyzed as its control pin sample_counter_reg[27]/G is not reached by a timing clock
+The latch sample_counter_reg[22] cannot be properly analyzed as its control pin sample_counter_reg[22]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#53 Warning
 Non-clocked latch  
-The latch sample_counter_reg[28] cannot be properly analyzed as its control pin sample_counter_reg[28]/G is not reached by a timing clock
+The latch sample_counter_reg[23] cannot be properly analyzed as its control pin sample_counter_reg[23]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#54 Warning
 Non-clocked latch  
-The latch sample_counter_reg[29] cannot be properly analyzed as its control pin sample_counter_reg[29]/G is not reached by a timing clock
+The latch sample_counter_reg[24] cannot be properly analyzed as its control pin sample_counter_reg[24]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#55 Warning
 Non-clocked latch  
-The latch sample_counter_reg[2] cannot be properly analyzed as its control pin sample_counter_reg[2]/G is not reached by a timing clock
+The latch sample_counter_reg[25] cannot be properly analyzed as its control pin sample_counter_reg[25]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#56 Warning
 Non-clocked latch  
-The latch sample_counter_reg[30] cannot be properly analyzed as its control pin sample_counter_reg[30]/G is not reached by a timing clock
+The latch sample_counter_reg[26] cannot be properly analyzed as its control pin sample_counter_reg[26]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#57 Warning
 Non-clocked latch  
-The latch sample_counter_reg[31] cannot be properly analyzed as its control pin sample_counter_reg[31]/G is not reached by a timing clock
+The latch sample_counter_reg[27] cannot be properly analyzed as its control pin sample_counter_reg[27]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#58 Warning
 Non-clocked latch  
-The latch sample_counter_reg[3] cannot be properly analyzed as its control pin sample_counter_reg[3]/G is not reached by a timing clock
+The latch sample_counter_reg[28] cannot be properly analyzed as its control pin sample_counter_reg[28]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#59 Warning
 Non-clocked latch  
-The latch sample_counter_reg[4] cannot be properly analyzed as its control pin sample_counter_reg[4]/G is not reached by a timing clock
+The latch sample_counter_reg[29] cannot be properly analyzed as its control pin sample_counter_reg[29]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#60 Warning
 Non-clocked latch  
-The latch sample_counter_reg[5] cannot be properly analyzed as its control pin sample_counter_reg[5]/G is not reached by a timing clock
+The latch sample_counter_reg[2] cannot be properly analyzed as its control pin sample_counter_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#61 Warning
 Non-clocked latch  
-The latch sample_counter_reg[6] cannot be properly analyzed as its control pin sample_counter_reg[6]/G is not reached by a timing clock
+The latch sample_counter_reg[30] cannot be properly analyzed as its control pin sample_counter_reg[30]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#62 Warning
 Non-clocked latch  
-The latch sample_counter_reg[7] cannot be properly analyzed as its control pin sample_counter_reg[7]/G is not reached by a timing clock
+The latch sample_counter_reg[31] cannot be properly analyzed as its control pin sample_counter_reg[31]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#63 Warning
 Non-clocked latch  
-The latch sample_counter_reg[8] cannot be properly analyzed as its control pin sample_counter_reg[8]/G is not reached by a timing clock
+The latch sample_counter_reg[3] cannot be properly analyzed as its control pin sample_counter_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#64 Warning
 Non-clocked latch  
-The latch sample_counter_reg[9] cannot be properly analyzed as its control pin sample_counter_reg[9]/G is not reached by a timing clock
+The latch sample_counter_reg[4] cannot be properly analyzed as its control pin sample_counter_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#65 Warning
 Non-clocked latch  
-The latch shift_reg_reg[1] cannot be properly analyzed as its control pin shift_reg_reg[1]/G is not reached by a timing clock
+The latch sample_counter_reg[5] cannot be properly analyzed as its control pin sample_counter_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#66 Warning
 Non-clocked latch  
-The latch shift_reg_reg[2] cannot be properly analyzed as its control pin shift_reg_reg[2]/G is not reached by a timing clock
+The latch sample_counter_reg[6] cannot be properly analyzed as its control pin sample_counter_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#67 Warning
 Non-clocked latch  
-The latch shift_reg_reg[3] cannot be properly analyzed as its control pin shift_reg_reg[3]/G is not reached by a timing clock
+The latch sample_counter_reg[7] cannot be properly analyzed as its control pin sample_counter_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#68 Warning
 Non-clocked latch  
-The latch shift_reg_reg[4] cannot be properly analyzed as its control pin shift_reg_reg[4]/G is not reached by a timing clock
+The latch sample_counter_reg[8] cannot be properly analyzed as its control pin sample_counter_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#69 Warning
 Non-clocked latch  
-The latch shift_reg_reg[5] cannot be properly analyzed as its control pin shift_reg_reg[5]/G is not reached by a timing clock
+The latch sample_counter_reg[9] cannot be properly analyzed as its control pin sample_counter_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#70 Warning
 Non-clocked latch  
-The latch shift_reg_reg[6] cannot be properly analyzed as its control pin shift_reg_reg[6]/G is not reached by a timing clock
+The latch shift_reg_reg[1] cannot be properly analyzed as its control pin shift_reg_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#71 Warning
 Non-clocked latch  
-The latch shift_reg_reg[7] cannot be properly analyzed as its control pin shift_reg_reg[7]/G is not reached by a timing clock
+The latch shift_reg_reg[2] cannot be properly analyzed as its control pin shift_reg_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#72 Warning
 Non-clocked latch  
-The latch shift_reg_reg[8] cannot be properly analyzed as its control pin shift_reg_reg[8]/G is not reached by a timing clock
+The latch shift_reg_reg[3] cannot be properly analyzed as its control pin shift_reg_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#73 Warning
 Non-clocked latch  
-The latch shift_reg_reg[9] cannot be properly analyzed as its control pin shift_reg_reg[9]/G is not reached by a timing clock
+The latch shift_reg_reg[4] cannot be properly analyzed as its control pin shift_reg_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#74 Warning
+Non-clocked latch  
+The latch shift_reg_reg[5] cannot be properly analyzed as its control pin shift_reg_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#75 Warning
+Non-clocked latch  
+The latch shift_reg_reg[6] cannot be properly analyzed as its control pin shift_reg_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#76 Warning
+Non-clocked latch  
+The latch shift_reg_reg[7] cannot be properly analyzed as its control pin shift_reg_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#77 Warning
+Non-clocked latch  
+The latch shift_reg_reg[8] cannot be properly analyzed as its control pin shift_reg_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-23#1 Warning
 Combinational loop found  
-A timing loop has been detected on a combinational path. A timing arc has been disabled between shift_reg_reg[9]_i_9/I4 and shift_reg_reg[9]_i_9/O to disable the timing loop
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_11/S[0] and n_0_242_BUFG_inst_i_11/CO[3] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#2 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_20/S[0] and n_0_242_BUFG_inst_i_20/O[0] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#3 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_20/S[1] and n_0_242_BUFG_inst_i_20/O[1] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#4 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_21/S[0] and n_0_242_BUFG_inst_i_21/O[0] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#5 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_21/S[1] and n_0_242_BUFG_inst_i_21/O[1] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#6 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_22/S[0] and n_0_242_BUFG_inst_i_22/O[0] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#7 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_22/S[1] and n_0_242_BUFG_inst_i_22/O[1] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#8 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_32/S[0] and n_0_242_BUFG_inst_i_32/O[0] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#9 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_32/S[1] and n_0_242_BUFG_inst_i_32/O[1] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#10 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_33/S[0] and n_0_242_BUFG_inst_i_33/O[0] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#11 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_33/S[1] and n_0_242_BUFG_inst_i_33/O[1] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#12 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_53/S[0] and n_0_242_BUFG_inst_i_53/O[0] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#13 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_53/S[1] and n_0_242_BUFG_inst_i_53/O[1] to disable the timing loop
+Related violations: <none>
+
+TIMING-23#14 Warning
+Combinational loop found  
+A timing loop has been detected on a combinational path. A timing arc has been disabled between n_0_242_BUFG_inst_i_54/S[1] and n_0_242_BUFG_inst_i_54/O[1] to disable the timing loop
 Related violations: <none>
 
 
