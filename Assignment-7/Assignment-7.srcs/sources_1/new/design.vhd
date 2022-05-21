@@ -27,7 +27,7 @@ architecture Behavioral of design2 is
            anode : out STD_LOGIC_Vector(3 downto 0)); -- anode output
      end component multiDisplay;
 
-type states is (idle, start_bit, stop_bit, data_bits);
+type states is (idle, start_bit, stop_bit, data_bits, reset_check);
 signal state : states := idle;
 signal registered_data : std_logic := '1';
 signal data : std_logic := '1';
@@ -51,12 +51,21 @@ begin
             if(rising_edge(clk)) then
             
                 if(reset = '1') then
-                    state <= idle;
-                    data <= '1';
-                    byteToDisplay <= x"0000";
+                    state <= reset_check;
+                    clk_count <= 0;
+--                    data <= '1';
+--                    byteToDisplay <= x"0000";
                 end if;
                 
                 case state is
+                
+                    when reset_check =>
+                        if clk_count < clks_per_bit - 1 then
+                            clk_count <= clk_count + 1;
+                        else
+                            byteToDisplay <= x"0000";
+                            state <= idle;
+                        end if;
                 
                     when idle =>
                         clk_count <= 0;
@@ -64,8 +73,6 @@ begin
                         
                         if(data = '0') then
                             state <= start_bit;
-                        else
-                            state <= idle;
                         end if;
                         
                     when start_bit =>

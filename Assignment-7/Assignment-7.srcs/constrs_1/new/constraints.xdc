@@ -139,7 +139,7 @@ set_property PACKAGE_PIN W4 [get_ports {anode[3]}]
 
 #set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets startContinue_IBUF]
 #set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pause_IBUF]
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets reset_IBUF]
+#set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets reset_IBUF]
 
 ##Buttons
 #set_property PACKAGE_PIN U18 [get_ports startContinue]						
@@ -297,7 +297,7 @@ set_property PACKAGE_PIN W19 [get_ports reset]
 	#set_property IOSTANDARD LVCMOS33 [get_ports Vsync]
 
 
-set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets counter[0]]
+#set_property ALLOW_COMBINATORIAL_LOOPS TRUE [get_nets counter[0]]
 
 ##USB-RS232 Interface
 set_property PACKAGE_PIN B18 [get_ports inbit]						

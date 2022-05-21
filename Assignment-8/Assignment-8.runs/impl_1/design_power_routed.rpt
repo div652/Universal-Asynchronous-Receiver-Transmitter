@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date             : Sat May 21 13:59:30 2022
+| Date             : Sat May 21 16:25:11 2022
 | Host             : tanish-HP-ENVY-Laptop-13-ba1xxx running 64-bit Ubuntu 20.04.4 LTS
 | Command          : report_power -file design_power_routed.rpt -pb design_power_summary_routed.pb -rpx design_power_routed.rpx
 | Design           : \design 
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      310 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      129 |     20800 |            0.62 |
+| Slice Logic    |    <0.001 |      313 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      125 |     20800 |            0.60 |
 |   CARRY4       |    <0.001 |       26 |      8150 |            0.32 |
-|   Register     |    <0.001 |      114 |     41600 |            0.27 |
+|   Register     |    <0.001 |      117 |     41600 |            0.28 |
 |   Others       |     0.000 |        9 |       --- |             --- |
-| Signals        |    <0.001 |      198 |       --- |             --- |
-| I/O            |     0.013 |       14 |       106 |           13.21 |
+| Signals        |    <0.001 |      216 |       --- |             --- |
+| I/O            |     0.013 |       15 |       106 |           14.15 |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.087 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -141,7 +141,7 @@ Table of Contents
 | Name       | Power (W) |
 +------------+-----------+
 | \design    |     0.015 |
-|   Receiver |     0.002 |
+|   Receiver |     0.001 |
 +------------+-----------+
 
 

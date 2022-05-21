@@ -11,6 +11,7 @@ entity receiver is
     clk: in std_logic;
 --    reset: in std_logic;
     inbit: in std_logic;
+    reset: in std_logic;
     done: out std_logic;
     LED: out std_logic_vector(6 downto 0);
     anode : out std_logic_vector (3 downto 0);
@@ -50,8 +51,23 @@ begin
     process(clk) is
         begin
             if(rising_edge(clk)) then
+            
+                if(reset = '1') then
+                    state <= reset_check;
+                    clk_count <= 0;
+--                    data <= '1';
+--                    byteToDisplay <= x"0000";
+                end if;
                 
                 case state is
+                
+                    when reset_check =>
+                        if clk_count < clks_per_bit - 1 then
+                            clk_count <= clk_count + 1;
+                        else
+                            byteToDisplay <= x"0000";
+                            state <= idle;
+                        end if;
                 
                     when idle =>
                         clk_count <= 0;
@@ -60,8 +76,6 @@ begin
                         
                         if(data = '0') then
                             state <= start_bit;
-                        else
-                            state <= idle;
                         end if;
                         
                     when start_bit =>

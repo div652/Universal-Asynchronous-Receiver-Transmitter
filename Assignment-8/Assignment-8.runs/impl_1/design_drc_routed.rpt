@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Sat May 21 13:59:29 2022
+| Date         : Sat May 21 16:25:09 2022
 | Host         : tanish-HP-ENVY-Laptop-13-ba1xxx running 64-bit Ubuntu 20.04.4 LTS
 | Command      : report_drc -file design_drc_routed.rpt -pb design_drc_routed.pb -rpx design_drc_routed.rpx
 | Design       : \design 

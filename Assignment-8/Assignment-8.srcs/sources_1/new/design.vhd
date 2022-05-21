@@ -6,6 +6,7 @@ entity design is
   Port ( 
     clk: in std_logic;
     inbit: in std_logic;
+    reset: in std_logic;
     LED: out std_logic_vector(6 downto 0);
     anode: out std_logic_vector(3 downto 0);
     serial_output : out std_logic
@@ -26,7 +27,7 @@ begin
       end if;
   end process;
   
-  Receiver:  entity work.receiver(behavioral) port map (clk, inbit, done, LED, anode, serial_data);
-  Transmitter: entity work.transmitter(behavioral) port map (clk, done, inbyte, serial_output);
+  Receiver:  entity work.receiver(behavioral) port map (clk, inbit, reset, done, LED, anode, serial_data);
+  Transmitter: entity work.transmitter(behavioral) port map (clk, done, reset, inbyte, serial_output);
 
 end Behavioral;

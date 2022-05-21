@@ -10,6 +10,7 @@ entity transmitter is
   Port (
     clk: in std_logic;
     start: in std_logic;
+    reset: in std_logic;
     inbyte: in std_logic_vector(7 downto 0);
     serial_output: out std_logic
    );
@@ -27,7 +28,22 @@ begin
         begin
             if(rising_edge(clk)) then
             
+                if(reset = '1') then
+                    state <= reset_check;
+                    clk_count <= 0;
+--                    data <= '1';
+--                    byteToDisplay <= x"0000";
+                end if;
+            
                 case (state) is
+                
+                when reset_check =>
+                    if clk_count < clks_per_bit - 1 then
+                        clk_count <= clk_count + 1;
+                    else
+                        serial_output <= '1';
+                        state <= idle;
+                   end if;
                 
                 when idle =>
                     clk_count <= 0;
@@ -35,11 +51,7 @@ begin
                     serial_output <= '1';
                     if(start = '1') then
                         data <= inbyte;
-                        state <= start_bit;
-                        
-                    else
-                        state <= idle;
-                        
+                        state <= start_bit;                       
                     end if;
                     
                 when start_bit =>
