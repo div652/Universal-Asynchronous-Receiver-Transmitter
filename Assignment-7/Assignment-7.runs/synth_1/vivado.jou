@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed May 18 18:11:00 2022
-# Process ID: 51043
+# Start of session at: Sat May 21 19:17:26 2022
+# Process ID: 5076
 # Current directory: /home/divyanshu/COL215/Assignment-7/Assignment-7.runs/synth_1
-# Command line: vivado -log design.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design.tcl
-# Log file: /home/divyanshu/COL215/Assignment-7/Assignment-7.runs/synth_1/design.vds
+# Command line: vivado -log design2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design2.tcl
+# Log file: /home/divyanshu/COL215/Assignment-7/Assignment-7.runs/synth_1/design2.vds
 # Journal file: /home/divyanshu/COL215/Assignment-7/Assignment-7.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
-source design.tcl -notrace
+source design2.tcl -notrace
