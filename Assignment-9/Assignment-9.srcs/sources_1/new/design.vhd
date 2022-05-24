@@ -29,6 +29,8 @@ end design;
 
 architecture Behavioral of design is
 
+type states is (idle, receiving_write, done_write, receiving_read, done_read);
+signal state : states := idle;
 
 type ram_type is array (0 to max_elements - 1) of std_logic_vector(15 downto 0);
 signal ram : ram_type;
@@ -50,15 +52,58 @@ begin
     
     process(clk)
         begin
-            if rising_edge(clk) then      
-                if(write = '1' and is_full = '0') then 
-                    ram(head) <= write_data;
-                    head <= (head + 1) mod max_elements;
-                end if;
+            if rising_edge(clk) then 
+            
+                case (state) is
+                    when idle =>
+                        if(write = '1' and is_full = '0') then
+                            state <= receiving_write;
+                        elsif (read = '1' and is_empty = '0') then
+                            state <= receiving_read;
+                        else
+                            state <= idle;
+                        end if;
+                        
+                    when receiving_write =>
+                        ram(head) <= write_data;
+                        head <= (head + 1) mod max_elements;
+                        state <= done_write;
+                        
+                    when receiving_read =>
+                        tail <= (tail + 1) mod max_elements;
+                        state <= done_read;
+                        
+                    when done_write =>
+                        if(write = '0') then
+                            state <= idle;
+                        else
+                            state <= done_write;
+                        end if;
+                        
+                    when done_read =>
+                        if(read = '0') then
+                            state <= idle;
+                        else
+                            state <= done_read;
+                        end if;
+                     
+                    when others =>
+                        state <= idle;
+                        
+                        
+                end case;
+                            
+                 
+--                if(write = '1' and is_full = '0') then 
+                        
+--                            ram(head) <= write_data;
+--                            head <= (head + 1) mod max_elements;
+                            
+--                end if;
                 
-                if(read = '1' and is_empty = '0') then
-                    tail <= (tail + 1) mod max_elements;
-                end if;
+--                if(read = '1' and is_empty = '0') then
+--                    tail <= (tail + 1) mod max_elements;
+--                end if;
                 
                 if(element_count = 0) then empty <= '1'; else empty <= '0'; end if;
                 if(element_count = max_elements - 1) then is_full <= '1'; else is_full <= '0'; end if;
