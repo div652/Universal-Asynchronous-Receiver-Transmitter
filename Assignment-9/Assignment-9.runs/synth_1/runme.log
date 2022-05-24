@@ -1,0 +1,32 @@
+
+*** Running vivado
+    with args -log design.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source design.tcl -notrace
+Command: synth_design -top design -part xc7a35tcpg236-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 101621 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1653.102 ; gain = 151.719 ; free physical = 8704 ; free virtual = 14041
+---------------------------------------------------------------------------------
+ERROR: [Synth 8-2715] syntax error near RAMB36E1_inst [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/design.vhd:32]
+INFO: [Synth 8-2810] unit design ignored due to previous errors [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/design.vhd:268]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1704.852 ; gain = 203.469 ; free physical = 8732 ; free virtual = 14066
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+4 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Tue May 24 17:23:10 2022...
