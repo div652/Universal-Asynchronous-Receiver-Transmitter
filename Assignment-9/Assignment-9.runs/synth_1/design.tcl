@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 set_param chipscope.maxJobs 2
 create_project -in_memory -part xc7a35tcpg236-2
 
@@ -30,6 +31,7 @@ set_property target_language VHDL [current_project]
 set_property ip_output_repo /home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
+  /home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/BRAM.vhd
   /home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/singleDisplay.vhd
   /home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/multiDisplay.vhd
   /home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/design.vhd
