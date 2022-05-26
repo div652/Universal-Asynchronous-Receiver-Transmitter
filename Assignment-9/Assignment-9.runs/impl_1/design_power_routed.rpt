@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date             : Thu May 26 06:31:38 2022
+| Date             : Thu May 26 15:00:53 2022
 | Host             : divyanshu-HP-ENVY-x360-Convertible-13-bd0xxx running 64-bit Ubuntu 20.04.2 LTS
 | Command          : report_power -file design_power_routed.rpt -pb design_power_summary_routed.pb -rpx design_power_routed.rpx
 | Design           : \design 
@@ -53,12 +53,12 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      264 |       --- |             --- |
+| Slice Logic    |    <0.001 |      266 |       --- |             --- |
 |   LUT as Logic |    <0.001 |       91 |     20800 |            0.44 |
 |   CARRY4       |    <0.001 |       29 |      8150 |            0.36 |
-|   Register     |    <0.001 |      104 |     41600 |            0.25 |
+|   Register     |    <0.001 |      105 |     41600 |            0.25 |
 |   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    <0.001 |      194 |       --- |             --- |
+| Signals        |    <0.001 |      195 |       --- |             --- |
 | Block RAM      |     0.002 |      0.5 |        50 |            1.00 |
 | I/O            |     0.016 |       32 |       106 |           30.19 |
 | Static Power   |     0.072 |          |           |                 |
