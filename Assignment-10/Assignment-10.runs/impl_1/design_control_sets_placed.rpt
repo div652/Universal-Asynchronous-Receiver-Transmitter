@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu May 26 15:30:44 2022
+| Date         : Thu May 26 21:40:37 2022
 | Host         : tanish-HP-ENVY-Laptop-13-ba1xxx running 64-bit Ubuntu 20.04.4 LTS
 | Command      : report_control_sets -verbose -file design_control_sets_placed.rpt
 | Design       : \design 
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    10 |
-|    Minimum number of control sets                        |    10 |
+| Total control sets                                       |    12 |
+|    Minimum number of control sets                        |    12 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    28 |
+| Unused register locations in slices containing registers |    23 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    10 |
-| >= 0 to < 4        |     2 |
-| >= 4 to < 6        |     0 |
+| Total control sets |    12 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     1 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     3 |
 | >= 10 to < 12      |     0 |
-| >= 12 to < 14      |     1 |
-| >= 14 to < 16      |     1 |
-| >= 16              |     3 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     2 |
+| >= 16              |     5 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,31 +58,33 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              87 |           31 |
+| No           | No                    | No                     |             101 |           41 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              50 |           15 |
+| No           | Yes                   | No                     |              63 |           17 |
+| Yes          | No                    | No                     |              55 |           23 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              27 |           10 |
+| Yes          | Yes                   | No                     |              30 |           10 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+-----------------------------------+-----------------------------------+------------------+----------------+
-|  Clock Signal  |           Enable Signal           |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
-+----------------+-----------------------------------+-----------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG | Transmitter/serial_output_i_1_n_0 |                                   |                1 |              1 |
-|  clk_IBUF_BUFG | Receiver/clk_count                |                                   |                1 |              1 |
-|  clk_IBUF_BUFG | Transmitter/data                  |                                   |                3 |              8 |
-|  clk_IBUF_BUFG | Receiver/serial_data[7]_i_1_n_0   |                                   |                2 |              8 |
-|  Receiver/E[0] |                                   |                                   |                3 |              9 |
-|  clk_IBUF_BUFG | Receiver/clk_count                | Receiver/clk_count[13]_i_1__0_n_0 |                4 |             13 |
-|  clk_IBUF_BUFG | Transmitter/clk_count             | Transmitter/clk_count0            |                6 |             14 |
-|  clk_IBUF_BUFG | Receiver/done                     |                                   |                4 |             16 |
-|  clk_IBUF_BUFG | Transmitter/tx_empty_reg_0        |                                   |                4 |             16 |
-|  clk_IBUF_BUFG |                                   |                                   |               28 |             78 |
-+----------------+-----------------------------------+-----------------------------------+------------------+----------------+
++---------------------+-----------------------------------+-----------------------------------+------------------+----------------+
+|     Clock Signal    |           Enable Signal           |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++---------------------+-----------------------------------+-----------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG      | Transmitter/serial_output_i_1_n_0 |                                   |                1 |              1 |
+|  slow_clock_reg_n_0 |                                   |                                   |                1 |              4 |
+|  clk_IBUF_BUFG      | Receiver/serial_data[7]_i_1_n_0   |                                   |                5 |              8 |
+|  clk_IBUF_BUFG      | Receiver/E[0]                     |                                   |                4 |              8 |
+|  clk_IBUF_BUFG      | Transmitter/data_0                |                                   |                1 |              8 |
+|  clk_IBUF_BUFG      | Receiver/clk_count                |                                   |                7 |             14 |
+|  clk_IBUF_BUFG      | Transmitter/clk_count             | Transmitter/clk_count0            |                6 |             14 |
+|  clk_IBUF_BUFG      | Receiver/write_en0                | TimingCircuit/head                |                4 |             16 |
+|  clk_IBUF_BUFG      | TimingCircuit/tail[15]_i_1_n_0    |                                   |                5 |             16 |
+|  clk_IBUF_BUFG      |                                   | slow_clock                        |                8 |             31 |
+|  clk_IBUF_BUFG      |                                   | TimingCircuit/counter[31]_i_1_n_0 |                9 |             32 |
+|  clk_IBUF_BUFG      |                                   |                                   |               40 |             97 |
++---------------------+-----------------------------------+-----------------------------------+------------------+----------------+
 
 

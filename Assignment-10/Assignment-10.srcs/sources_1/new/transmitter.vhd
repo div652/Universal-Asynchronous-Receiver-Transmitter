@@ -13,9 +13,7 @@ entity transmitter is
     reset: in std_logic;
     inbyte: in std_logic_vector(7 downto 0);
     serial_output: out std_logic;
-    tx_empty: out std_logic;
-    LED: out std_logic_vector(6 downto 0);
-    anode: out std_logic_vector(3 downto 0)
+    tx_empty: out std_logic
    );
 end transmitter;
 
@@ -34,9 +32,9 @@ signal state: states := idle;
 signal clk_count: integer range 0 to clks_per_bit := 0;
 signal bit_index: integer range 0 to 7 := 0;
 signal data: std_logic_vector(7 downto 0);
-signal byteToDisplay: std_logic_vector(15 downto 0);
+--signal byteToDisplay: std_logic_vector(15 downto 0);
 begin
-    byteToDisplay <= x"00" & data;
+--    byteToDisplay <= x"00" & data;
     process(clk)
         begin
             if(rising_edge(clk)) then
@@ -121,8 +119,5 @@ begin
             end if;
         
     end process;
-
-Multi_display: 
-    entity work.lightDisplay(structure) port map(byteToDisplay, clk, LED, anode);
 
 end Behavioral;

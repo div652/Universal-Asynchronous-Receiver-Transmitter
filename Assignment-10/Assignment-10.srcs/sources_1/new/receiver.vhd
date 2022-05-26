@@ -13,8 +13,8 @@ entity receiver is
     inbit: in std_logic;
     reset: in std_logic;
     done: out std_logic;
-    LED: out std_logic_vector(6 downto 0);
-    anode : out std_logic_vector (3 downto 0);
+--    LED: out std_logic_vector(6 downto 0);
+--    anode : out std_logic_vector (3 downto 0);
     serial_data : out std_logic_vector (7 downto 0);
     rx_full: out std_logic
     );
@@ -22,13 +22,13 @@ end receiver;
 
 architecture Behavioral of receiver is
     
-    component multiDisplay
-	   Port ( 
-    		Number : in std_logic_vector(15 downto 0);  -- this is the 16bit input taken from the user , groups of four are interpreted as single hex number
-    		Clk : in std_logic;  -- this is the device clock
-            LED : out std_logic_vector(6 downto 0); -- led output , mapped to the cathodes
-           anode : out STD_LOGIC_Vector(3 downto 0)); -- anode output
-     end component multiDisplay;
+--    component multiDisplay
+--	   Port ( 
+--    		Number : in std_logic_vector(15 downto 0);  -- this is the 16bit input taken from the user , groups of four are interpreted as single hex number
+--    		Clk : in std_logic;  -- this is the device clock
+--            LED : out std_logic_vector(6 downto 0); -- led output , mapped to the cathodes
+--           anode : out STD_LOGIC_Vector(3 downto 0)); -- anode output
+--     end component multiDisplay;
 
 signal state : states := idle;
 signal registered_data : std_logic := '1';
@@ -133,9 +133,5 @@ begin
             end if;
         
     end process;
-
-
-Multi_display: 
-    entity work.lightDisplay(structure) port map(byteToDisplay, clk, LED, anode);
 
 end Behavioral;

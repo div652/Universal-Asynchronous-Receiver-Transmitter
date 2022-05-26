@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-2L" LaunchTime="1653559205">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-2L" LaunchTime="1653581396">
   <File Type="VDS-TIMING-PB" Name="design_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="design_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="design.dcp"/>
@@ -23,18 +23,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/singleDisplay.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/multiDisplay.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/receiver.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -48,6 +36,18 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/timing_circuit.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/singleDisplay.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/multiDisplay.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
