@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.runs/impl_1'
+HD_PWD='/home/divyanshu/COL215/Assignment-9/Assignment-9.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -37,7 +37,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log design.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design.tcl -notrace
 
 

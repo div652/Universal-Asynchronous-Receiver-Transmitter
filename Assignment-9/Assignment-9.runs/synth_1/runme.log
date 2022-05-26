@@ -15,22 +15,22 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-2
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 116224 
+INFO: Helper process launched with PID 13236 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1653.102 ; gain = 151.719 ; free physical = 1055 ; free virtual = 9335
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1676.887 ; gain = 152.719 ; free physical = 9407 ; free virtual = 19224
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module '\design ' [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/design.vhd:33]
-INFO: [Synth 8-638] synthesizing module 'BRAM' [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/BRAM.vhd:20]
+INFO: [Synth 8-638] synthesizing module '\design ' [/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/design.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'BRAM' [/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/BRAM.vhd:20]
 	Parameter ADDRESS_WIDTH bound to: 8 - type: integer 
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'BRAM' (1#1) [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/BRAM.vhd:20]
-INFO: [Synth 8-638] synthesizing module 'lightDisplay' [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/multiDisplay.vhd:13]
-INFO: [Synth 8-638] synthesizing module 'singleDisplay' [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/singleDisplay.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'singleDisplay' (2#1) [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/singleDisplay.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'lightDisplay' (3#1) [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/multiDisplay.vhd:13]
-INFO: [Synth 8-256] done synthesizing module '\design ' (4#1) [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/design.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'BRAM' (1#1) [/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/BRAM.vhd:20]
+INFO: [Synth 8-638] synthesizing module 'lightDisplay' [/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/multiDisplay.vhd:13]
+INFO: [Synth 8-638] synthesizing module 'singleDisplay' [/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/singleDisplay.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'singleDisplay' (2#1) [/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/singleDisplay.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'lightDisplay' (3#1) [/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/multiDisplay.vhd:13]
+INFO: [Synth 8-256] done synthesizing module '\design ' (4#1) [/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/design.vhd:33]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1707.852 ; gain = 206.469 ; free physical = 1077 ; free virtual = 9357
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1730.637 ; gain = 206.469 ; free physical = 9432 ; free virtual = 19250
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -43,48 +43,58 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1710.820 ; gain = 209.438 ; free physical = 1076 ; free virtual = 9356
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1736.574 ; gain = 212.406 ; free physical = 9429 ; free virtual = 19247
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1710.820 ; gain = 209.438 ; free physical = 1076 ; free virtual = 9356
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1736.574 ; gain = 212.406 ; free physical = 9429 ; free virtual = 19247
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/constrs_1/new/contraints.xdc]
-Finished Parsing XDC File [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/constrs_1/new/contraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/constrs_1/new/contraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/\design _propImpl.xdc].
+Parsing XDC File [/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/constrs_1/new/contraints.xdc]
+Finished Parsing XDC File [/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/constrs_1/new/contraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/constrs_1/new/contraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/\design _propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/\design _propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1881.477 ; gain = 0.000 ; free physical = 985 ; free virtual = 9265
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1904.293 ; gain = 0.000 ; free physical = 9320 ; free virtual = 19154
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1881.477 ; gain = 0.000 ; free physical = 985 ; free virtual = 9265
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1904.293 ; gain = 0.000 ; free physical = 9320 ; free virtual = 19154
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 1054 ; free virtual = 9334
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9393 ; free virtual = 19227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 1054 ; free virtual = 9334
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9393 ; free virtual = 19227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 1056 ; free virtual = 9336
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9393 ; free virtual = 19227
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "anode" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "light_num" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/design.vhd:100]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/design.vhd:102]
+INFO: [Synth 8-802] inferred FSM for state register 'mystate_reg' in module 'design'
 INFO: [Synth 8-6430] The Block RAM "BRAM:/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              001 |                               00
+              processing |                              010 |                               01
+                  iSTATE |                              100 |                               10
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mystate_reg' using encoding 'one-hot' in module 'design'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 1048 ; free virtual = 9328
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9383 ; free virtual = 19218
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -115,6 +125,7 @@ Detailed RTL Component Info :
 	   4 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
 	   4 Input      1 Bit        Muxes := 4     
 	   2 Input      1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
@@ -136,6 +147,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 5     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
+	   3 Input      3 Bit        Muxes := 1     
 Module BRAM 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -182,6 +194,7 @@ RAM Pipeline Warning: Read Address Register Found For RAM myBRAM/ram_reg. We wil
 INFO: [Synth 8-6430] The Block RAM "\design/myBRAM/ram_reg " may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
 INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM myBRAM/ram_reg to conserve power
 RAM Pipeline Warning: Read Address Register Found For RAM myBRAM/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-3886] merging instance 'FSM_onehot_mystate_reg[1]' (FDR) to 'read_en_reg'
 INFO: [Synth 8-3886] merging instance 'Multi_Display/counter_new_reg[31]' (FDR) to 'Multi_Display/counter_new_reg[30]'
 INFO: [Synth 8-3886] merging instance 'Multi_Display/counter_new_reg[30]' (FDR) to 'Multi_Display/counter_new_reg[29]'
 INFO: [Synth 8-3886] merging instance 'Multi_Display/counter_new_reg[29]' (FDR) to 'Multi_Display/counter_new_reg[28]'
@@ -242,8 +255,9 @@ INFO: [Synth 8-3886] merging instance 'Multi_Display/light_num_reg[5]' (FD) to '
 INFO: [Synth 8-3886] merging instance 'Multi_Display/light_num_reg[4]' (FD) to 'Multi_Display/light_num_reg[3]'
 INFO: [Synth 8-3886] merging instance 'Multi_Display/light_num_reg[3]' (FD) to 'Multi_Display/light_num_reg[2]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Multi_Display/light_num_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_mystate_reg[2]) is unused and will be removed from module \design .
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 1035 ; free virtual = 9318
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9369 ; free virtual = 19208
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -271,13 +285,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 917 ; free virtual = 9200
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9244 ; free virtual = 19090
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 915 ; free virtual = 9198
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9243 ; free virtual = 19089
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -304,7 +318,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6837] The timing for the instance myBRAM/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 915 ; free virtual = 9198
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9242 ; free virtual = 19089
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -328,7 +342,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 926 ; free virtual = 9209
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9251 ; free virtual = 19097
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -341,7 +355,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 926 ; free virtual = 9209
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9251 ; free virtual = 19097
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -353,25 +367,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 926 ; free virtual = 9209
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9251 ; free virtual = 19097
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 926 ; free virtual = 9209
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9251 ; free virtual = 19097
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 926 ; free virtual = 9209
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9251 ; free virtual = 19097
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 926 ; free virtual = 9209
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9251 ; free virtual = 19097
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -389,14 +403,14 @@ Report Cell Usage:
 +------+---------+------+
 |1     |BUFG     |     1|
 |2     |CARRY4   |    29|
-|3     |LUT1     |    25|
-|4     |LUT2     |    50|
+|3     |LUT1     |    26|
+|4     |LUT2     |    52|
 |5     |LUT3     |     5|
 |6     |LUT4     |    26|
 |7     |LUT5     |     7|
 |8     |LUT6     |    10|
 |9     |RAMB18E1 |     1|
-|10    |FDRE     |   101|
+|10    |FDRE     |   102|
 |11    |IBUF     |    19|
 |12    |OBUF     |    13|
 +------+---------+------+
@@ -405,33 +419,33 @@ Report Instance Areas:
 +------+-------------------+--------------+------+
 |      |Instance           |Module        |Cells |
 +------+-------------------+--------------+------+
-|1     |top                |              |   287|
+|1     |top                |              |   291|
 |2     |  myBRAM           |BRAM          |     1|
 |3     |  Multi_Display    |lightDisplay  |   128|
 |4     |    Single_display |singleDisplay |    11|
 +------+-------------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 926 ; free virtual = 9209
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9251 ; free virtual = 19097
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1881.477 ; gain = 209.438 ; free physical = 977 ; free virtual = 9260
-Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1881.477 ; gain = 380.094 ; free physical = 977 ; free virtual = 9260
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1904.293 ; gain = 212.406 ; free physical = 9303 ; free virtual = 19150
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1904.293 ; gain = 380.125 ; free physical = 9303 ; free virtual = 19150
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1881.477 ; gain = 0.000 ; free physical = 925 ; free virtual = 9208
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1904.293 ; gain = 0.000 ; free physical = 9254 ; free virtual = 19101
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-88 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+91 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1881.477 ; gain = 515.477 ; free physical = 1022 ; free virtual = 9305
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1881.477 ; gain = 0.000 ; free physical = 1022 ; free virtual = 9305
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1904.293 ; gain = 541.258 ; free physical = 9351 ; free virtual = 19198
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1904.293 ; gain = 0.000 ; free physical = 9351 ; free virtual = 19198
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.runs/synth_1/design.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/divyanshu/COL215/Assignment-9/Assignment-9.runs/synth_1/design.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_utilization_synth.rpt -pb design_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed May 25 18:37:23 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu May 26 06:31:02 2022...

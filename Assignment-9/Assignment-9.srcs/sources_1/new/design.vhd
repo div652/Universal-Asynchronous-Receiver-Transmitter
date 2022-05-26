@@ -2,8 +2,8 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
-Library UNISIM;
-use UNISIM.vcomponents.all;
+
+
 				
 entity design is
 --  generic(
@@ -52,6 +52,8 @@ end component BRAM;
 
 --type ram_type is array (max_elements - 1 downto 0) of std_logic_vector(15 downto 0);
 --signal ram : ram_type;
+type write_states is (idle, processing,completed);
+type read_States is (idle, processing,completed);
 
 signal head : std_logic_vector(7 downto 0):=x"00";
 signal tail : std_logic_vector(7 downto 0):=x"00";
@@ -65,6 +67,8 @@ signal write_en : std_logic := '0';
 signal read_en : std_logic := '0';
 signal done_read : std_logic := '0';
 signal done_write : std_logic := '0';
+signal write_state : write_states := idle ;
+signal read_state : read_states :=idle ; 
 
 begin
    
@@ -90,7 +94,7 @@ begin
         begin
             if rising_edge(clk) then 
                 
-                if(counter = 2500000) then
+                if(counter = 2500000) then -- clock period will nwo be 2500000*2*10 = 50000000 ns=50ms. 
                     counter <= 0;
                     slow_clock <= not(slow_clock);
                 else
@@ -105,12 +109,33 @@ begin
                 if(element_count = x"FF" - 1) then is_full <= '1'; else is_full <= '0'; end if;
             end if;
     end process;    
-
+    -- if you press two ones in the same clock period then that would be problematic, wait for a whole clock to complete before pressing the button again 
+    
     process(slow_clock, write, read)
         begin
             if(rising_edge(slow_clock) and slow_clock'event) then
-                if(write = '1') then write_en <= '1'; else write_en <= '0'; end if;
-                if(read = '1') then read_en <= '1'; else read_en <= '0'; end if;
+                if(write = '1') then 
+               		 case (write_state) is 
+                    	when idle => write_en <= '1';write_state<=processing; 
+                    	when processing => write_en<='0'; write_state<=completed;
+                    	when others => write_en<='0';write_state<=completed;
+                	  end case;
+           	 	else  -- in each case you go state idle if '0' is encountered on write. 
+            -- the only problem to this apprach is that for simultaneous writes/reads you will have to wait
+            -- at least one whole slow-clock cycle before pressing the button again else it would not be registered
+                	write_en <= '0'; write_state <= idle ; 
+-- if processing state and write='1' then change state to completed and turn off we 
+-- if you are in completed stage ie. we has been ON for one slow cycle now you'll wait for a 0 to go into idle state. 
+           			 end if;
+            
+            if(read = '1') then 
+                case (read_state) is 
+                    when idle => read_en <= '1'; read_state<=processing;
+                    when processing => read_en<='0' ; read_state<=completed;
+                    when others =>read_en<='0' ; read_state<=completed;
+                end case;
+            else read_en <= '0'; read_state<=idle; 
+            end if;
                 
                 if(write_en = '1' and is_full = '0') then 
 --                    ram(head) <= write_data;

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/tanish/Desktop/GitHub/COL215/Assignment-9/Assignment-9.srcs/constrs_1/new/contraints.xdc rfile:../../../Assignment-9.srcs/constrs_1/new/contraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/constrs_1/new/contraints.xdc rfile:../../../Assignment-9.srcs/constrs_1/new/contraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports clk]
 set_property src_info {type:XDC file:1 line:15 export:INPUT save:INPUT read:READ} [current_design]
