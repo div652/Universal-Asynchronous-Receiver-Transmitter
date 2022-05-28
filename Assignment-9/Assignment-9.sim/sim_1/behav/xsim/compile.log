@@ -1,0 +1,10 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/BRAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'BRAM'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/singleDisplay.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'singleDisplay'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/multiDisplay.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'lightDisplay'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/design.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sim_1/new/testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'testbench'

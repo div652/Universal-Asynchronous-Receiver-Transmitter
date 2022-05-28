@@ -1,0 +1,22 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto 7711a1a89a92429d8617178529cd2a6a --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot testbench_behav xil_defaultlib.testbench -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.BRAM [\BRAM(address_width=8,data_lengt...]
+Compiling architecture design_arch of entity xil_defaultlib.singleDisplay [singledisplay_default]
+Compiling architecture structure of entity xil_defaultlib.lightDisplay [lightdisplay_default]
+Compiling architecture behavioral of entity xil_defaultlib.design [design_default]
+Compiling architecture mytest of entity xil_defaultlib.testbench
+ERROR: [XSIM 43-3409] Failed to compile generated C file xsim.dir/testbench_behav/obj/xsim_1.c.
+ERROR: [XSIM 43-3915] Encountered a fatal error. Cannot continue. Exiting... 

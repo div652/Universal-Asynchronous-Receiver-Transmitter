@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Thu May 26 15:00:42 2022
+| Date         : Sat May 28 19:47:58 2022
 | Host         : divyanshu-HP-ENVY-x360-Convertible-13-bd0xxx running 64-bit Ubuntu 20.04.2 LTS
 | Command      : report_control_sets -verbose -file design_control_sets_placed.rpt
 | Design       : \design 
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              58 |           20 |
+| No           | No                    | No                     |              58 |           18 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              31 |            8 |
-| Yes          | No                    | No                     |              16 |            4 |
+| Yes          | No                    | No                     |              16 |            5 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -74,10 +74,10 @@ Table of Contents
 |     Clock Signal    | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +---------------------+---------------+------------------+------------------+----------------+
 |  slow_clock_reg_n_0 |               |                  |                2 |              4 |
-|  slow_clock_reg_n_0 | tail0         |                  |                2 |              8 |
 |  slow_clock_reg_n_0 | head0         |                  |                2 |              8 |
+|  slow_clock_reg_n_0 | tail0         |                  |                3 |              8 |
 |  clk_IBUF_BUFG      |               | slow_clock       |                8 |             31 |
-|  clk_IBUF_BUFG      |               |                  |               18 |             54 |
+|  clk_IBUF_BUFG      |               |                  |               16 |             54 |
 +---------------------+---------------+------------------+------------------+----------------+
 
 

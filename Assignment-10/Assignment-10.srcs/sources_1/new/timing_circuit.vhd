@@ -39,7 +39,7 @@ begin
             if(rising_edge(clk) and clk'event) then
             
                 if(reset = '1') then
-                    tail <= head;
+                    tail <= head+1;
                 end if;
             
                 if(counter = 500000) then --10ms

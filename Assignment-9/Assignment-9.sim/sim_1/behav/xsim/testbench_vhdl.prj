@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Assignment-9.srcs/sources_1/new/BRAM.vhd" \
+"../../../../Assignment-9.srcs/sources_1/new/singleDisplay.vhd" \
+"../../../../Assignment-9.srcs/sources_1/new/multiDisplay.vhd" \
+"../../../../Assignment-9.srcs/sources_1/new/design.vhd" \
+"../../../../Assignment-9.srcs/sim_1/new/testbench.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,9 @@
+0.6
+2019.1
+May 24 2019
+14:51:52
+/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sim_1/new/testbench.vhd,1653745916,vhdl,,,,testbench,,,,,,,,
+/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/BRAM.vhd,1653745678,vhdl,/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/design.vhd,,,bram,,,,,,,,
+/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/design.vhd,1653745755,vhdl,,,,design,,,,,,,,
+/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/multiDisplay.vhd,1653582118,vhdl,/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/design.vhd,,,lightdisplay,,,,,,,,
+/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/singleDisplay.vhd,1653582118,vhdl,/home/divyanshu/COL215/Assignment-9/Assignment-9.srcs/sources_1/new/multiDisplay.vhd,,,singledisplay,,,,,,,,

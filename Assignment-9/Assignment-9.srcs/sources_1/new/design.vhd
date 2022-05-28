@@ -69,19 +69,19 @@ signal done_read : std_logic := '0';
 signal done_write : std_logic := '0';
 signal write_state : write_states := idle ;
 signal read_state : read_states :=idle ; 
-
+signal addr: std_logic_vector(7 downto 00) := x"FF";
 begin
    
-   
+   addr <= tail - 1;
     myBRAM: entity work.BRAM(Behavioral) generic map(
         ADDRESS_WIDTH => 8,
-        DATA_WIDTH =>  16
+        DATA_LENGTH =>  16
     )
     port map(
-        clk => clk,
-        w_enable => write,
+        clock => clk,
+        write_enable => write,
         write_address => head,
-        read_address => tail,
+        read_address => addr,
         datain => write_data,
         dataout => data
     );
