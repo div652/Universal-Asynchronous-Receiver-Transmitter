@@ -69,7 +69,7 @@ signal done_read : std_logic := '0';
 signal done_write : std_logic := '0';
 signal write_state : write_states := idle ;
 signal read_state : read_states :=idle ; 
-signal addr: std_logic_vector(7 downto 00) := x"FF";
+signal addr: std_logic_vector(7 downto 0) := x"FF";
 begin
    
    addr <= tail - 1;
@@ -139,13 +139,13 @@ begin
                 
                 if(write_en = '1' and is_full = '0') then 
 --                    ram(head) <= write_data;
-                    head <= (head + "00000001");
+                    head <= (head + 1);
                             
                 end if;
                 
                 if(read_en = '1' and is_empty = '0') then
 --                    data <= ram(tail);
-                    tail <= (tail + "00000001");
+                    tail <= (tail + 1);
                 end if;
             end if;
     end process;
