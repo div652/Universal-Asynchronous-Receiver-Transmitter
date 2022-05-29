@@ -31,7 +31,7 @@ PS: Assignment-1 was non-graded and was only for practice. Hence, it hasn't been
 
 To run the projects on Vivado, open the .xpr file of the project in Vivado, this will automatically open and load the project in vivado . 
 
-Alternatively if you want to access the separte files then they can be found in the corresponding Assignment folder at the following relative paths : 
+Alternatively if you want to access the separate files then they can be found in the corresponding Assignment folder at the following relative paths : 
 
 **VHDL Source File(s)**  **:** ``` <Assignment-name>.srcs/sources_1/new/```
 
