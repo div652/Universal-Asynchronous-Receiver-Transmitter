@@ -23,6 +23,10 @@
 
 The repository contains various projects named as the assignment number. Each assignment contains an additional file named Assignmentx_Report.pdf, where x is the assignment number. This report is a description of the strategies used to do the assignment and accomplish the required task. 
 
+Each assignment also contains a file named Assignment-x.pdf, where x is the assignment number. This file contains the problem statement for each assignment.
+
+PS: Assignment-1 was non-graded and was only for practice. Hence, it hasn't been included in the repository.
+
 ### Running the projects
 
 To run the projects on Vivado, open the .xpr file of the project in Vivado, this will automatically open and load the project in vivado . 
