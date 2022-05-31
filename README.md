@@ -39,5 +39,9 @@ Alternatively if you want to access the separate files then they can be found in
 
 **Bitstream (.bit) :** 	    ```<Assignment-name>.runs/impl_1/```
 
+### For IITD Students
+
+It may happen that you are given the same assignments. Copy at your own risk (changing variable names doesn't remove plagiarism ;) ).
+
 
 
