@@ -1,0 +1,17 @@
+The following instructions will help you install Vivado on your personal computer.
+
+Requirements: 
+
+Ubuntu
+Around 35 GB of hard disk memory
+Zipped installation file xilinx_vivado_tool
+Steps:
+
+Extract the xilinx_vivado_tool files to a folder named xilinx_vivado_tool.
+Change directory
+cd xilinx_vivado_tool
+Execute the file xsetup
+sudo bash xsetup
+Follow the screen instructions and install Vivado HL WebPACK.
+Set the path for running Vivado
+source /tools/Xilinx/Vivado/2019.1/settings64.sh
