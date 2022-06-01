@@ -43,6 +43,8 @@ signal slow_clock:std_logic:='0';
 type state is (idle, processing,completed);
 signal tx_state : state := idle ;
 signal reset_state : state :=idle ; 
+signal reset_state_final : state :=idle ; 
+signal reset_final : std_logic := '0'; 
 signal tx_start_final: std_logic := '0';
 signal tx_start_state: state := idle;
 
@@ -85,25 +87,25 @@ begin
                     end if;
                end case;  
                
-            case(tx_start_state) is
+            case(reset_state_final) is
                 when idle =>
-                    tx_start_final <= '0';
-                    if(tx_start_debounced = '1') then
-                        tx_start_state <= processing;
+                    reset_final <= '0';
+                    if(reset_debounced = '1') then
+                        reset_state_final <= processing;
                     else
-                        tx_start_state <= idle;
+                        reset_state_final <= idle;
                     end if;
                     
                when processing =>
-                    tx_start_final <= '1';
-                    tx_start_state <= completed;
+                    reset_final <= '1';
+                    reset_state_final <= completed;
                 
                when others =>
-                    tx_start_final <= '0';
-                    if(tx_start_debounced = '0') then
-                        tx_start_state <= idle;
+                    reset_final <= '0';
+                    if(reset_debounced = '0') then
+                        reset_state_final <= idle;
                     else
-                        tx_start_state <= completed;
+                        reset_state_final <= completed;
                         
                     end if;
                end case;  
@@ -150,9 +152,9 @@ begin
       end if;
             
     end process;
-  Receiver:  entity work.receiver(behavioral) port map (clk => clk, inbit => inbit, reset => reset_debounced, done => done, serial_data => serial_data, rx_full => rx_full);
-  Transmitter: entity work.transmitter(behavioral) port map (clk => clk, start => ld_tx, reset => reset_debounced, inbyte => inbyte, serial_output => serial_output, tx_empty => tx_empty);
-  TimingCircuit: entity work.timing_circuit(behavioral) port map (clk, tx_start_final, rx_full, tx_empty, tx_all, ld_tx, rd_addr, wr_addr, write_en, done, reset_debounced);
+  Receiver:  entity work.receiver(behavioral) port map (clk => clk, inbit => inbit, reset => reset_final, done => done, serial_data => serial_data, rx_full => rx_full);
+  Transmitter: entity work.transmitter(behavioral) port map (clk => clk, start => ld_tx, reset => reset_final, inbyte => inbyte, serial_output => serial_output, tx_empty => tx_empty);
+  TimingCircuit: entity work.timing_circuit(behavioral) port map (clk, tx_start_final, rx_full, tx_empty, tx_all, ld_tx, rd_addr, wr_addr, write_en, done, reset_final);
   myBRAM: entity work.BRAM(behavioral) port map(clk, write_en, wr_addr, rd_addr, serial_data, inbyte);
   Multi_display: 
     entity work.lightDisplay(structure) port map(byteToDisplay, clk, LED, anode);
